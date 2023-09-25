@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meta tags-->
+    <meta name="description" content="Portfolio Website, Coursework">
+    <meta name="keywords" content="CSS, HTML, javascript">
+    <meta name="author" content="Ujen Manandhar">
+    <meta http-equiv="refresh" content="8">
+
+    <title>Index</title>
+
+    <!--Link of External CSS-->
+    <link rel="stylesheet" href="../19033606 Ujen Manandhar/css/style.css">
+
+    <!--Link of External font-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!--Internal CSS-->
+    <style>
+        body {
+            background-color: khaki;
+        }
+
+        footer {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            background-color: black;
+            padding: 10px;
+            margin-top: 100px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Blog </h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Research.html">Research</a></li>
+                <li><a class="active" href="Blog.html">Blog</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="blog">
+            <h1 style="text-transform: capitalize;font-family: cursive;"> How internet technology has affected our daily <!--inline CSS-->
+                lives</h1><br>
+            <div id="blog_images"> <!--defining a section with class "blog"-->
+            </div><br>
+            <p>Throughout the years technology has helped us to revolutionize the world. Now that internet is available almost eerywhere, every kind of information that might prove to be useful in our daily lives are now available to us at our fingertips. Almost everything that we do in our day to day lives is now
+            accomplished with the help of some kind of technology. Modern technologies such as smartphones now have
+            constant access to the internet and with instant messaging apps can communicate with anyone in seconds
+            and can also use the social media platforms to stay connected with the entire world. Besides communication internet also servers as a means for entertainment. Various forms of entertainment such as
+            online multiplayer games, online movies and shows and music can be are now easily available to us. And
+            internet does not just provide entertainment, even services such as online shopping, online bill payment, money transfer, and other different kinds of services are only possible because of the
+            internet. Advancement in internet technology has made tasks such as transferring money instantly and
+            buying stuff such as clothes, groceries and other items so much easier. Even in the medical sectors,
+            technology has made it possible to keep better track of health conditions such as diabetes and also
+            portable devices such as smartwatches help better monitor a person health data and that data can be
+            instantly transferred to their respective doctors with the help of internet. <br> Every aspect of our
+            lives has started to depend upon the internet. The whole world is now connected with the help of
+            internet. Internet has caused drastic impact on every possible sector such as health, business, government, education and it has even changed the way we interact with other people. But along with its
+            advantages there are also many downsides to internet such as towards our privacy and security. </p>
+            <h2 style="text-transform: capitalize;font-family: cursive;">Positive impacts of internet technology</h3> <!--inline CSS-->
+                <br>
+                <img class="img hide" id="positive1" src="../19033606 Ujen Manandhar/images/Positive 1.jpg" alt="pos1"> 
+                <img class="img hide" id="positive2" src="../19033606 Ujen Manandhar/images/Positive 2.jpg" alt="pos2"><br>
+                <button onclick="Change()">Next Image</button> <!--calling change function and creating button"-->
+                <p>Internet provides our daily lives with numerous positive impacts such as with the help of services like instant messaging apps and email and because of that it is the most effective way to communicate with people throughout the world. It even saves us vital amount of time when conducting
+                any sort of business transaction. Our lives have become easier as we can shop for anything online
+                and use banking services for payments for any kind of bills. It also becomes easier for us to stay
+                up to date with what is happening all over the world as we no longer need the newspaper or
+                television for that. Even the education sector has benefitted in a significant way as libraries of
+                books and journals from every corner of the world is now easily accessible by everyone. It has made
+                learning new thing easier as students can now apply to various kinds of courses online. Conducting
+                any kinds of research is a lot easier as thousands of materials needed for that research is more
+                easily available which also beneficial for professional research as they can exchange information
+                faster and more efficiently. Searching for work has also been made easier as most vacancies now a
+                days are advertised online. </p>
+                <h2 style="text-transform: capitalize;font-family: cursive;">Negative impacts of internet technology
+                    </h3><br> <!--inline CSS-->
+                    <img class="img hide" id="negative1" src="../19033606 Ujen Manandhar/images/Negative 1.jpg" alt="neg1">
+                    <img class="img hide" id="negative2" src="../19033606 Ujen Manandhar/images/Negative 2.jpg" alt="neg2"><br>
+                    <button onclick="Change1()">Next Image</button> <!--calling change function and creating button"-->
+                    <p>One of the key issues associated with internet is online security and privacy. Privacy is something that is very important for our lives. Although social media has good impact, there are
+                    people who use it inappropriate purposes. Personal information and pictures of people are posted
+                    online without their consent. Criminal activities such as private data trafficking or social
+                    media exploitation is also occurring at large. Online privacy and security has become crucial
+                    for everyone and will only become more important moving forward. There is also a lot of easily
+                    available content which are inappropriate and aren’t age suitable. There are also a lot of cases
+                    where people have become addicted to social media which can negatively influence an individual’s
+                    life. Cases where a person illegally uses the internet to hack into another person’s account to
+                    steal their banking information and private details also happens frequently. Many instances
+                    where people abuse the media platform to spread hate messages have also happened.</p>
+        </div>
+    </main>
+    <footer>&copy; Copyright 2021 Ujen Manandhar. All Rights Reserved.</footer>
+    <script>
+        var image = 1;
+        function auto() { //function to change the image 
+            document.getElementById("blog_images").innerHTML = ('<img src="../19033606 Ujen Manandhar/Images/blog_images/blog1-' + image + '.jpg" class="blog_images">');
+            image++;
+            if (image > 2) {
+                image = 1;
+            }
+
+        }
+        auto();
+        setInterval(auto, 2100);
+
+        function Change() { //function to change the image on clicking the button
+            var p1 = document.getElementById('positive1');
+            var p2 = document.getElementById('positive2');
+
+            if (p1.style.display == 'none') {
+                p1.style.display = "block";
+                p2.style.display = "none";
+            }
+            else {
+                p1.style.display = "none";
+                p2.style.display = "block";
+            }
+        }
+        document.getElementById('positive1').style.display = "block";
+
+        function Change1() { //function to change the image on clicking the button
+            var n1 = document.getElementById('negative1');
+            var n2 = document.getElementById('negative2');
+
+            if (n1.style.display == 'none') {
+                n1.style.display = "block";
+                n2.style.display = "none";
+            }
+            else {
+                n1.style.display = "none";
+                n2.style.display = "block";
+            }
+        }
+        document.getElementById('negative1').style.display = "block";
+    </script>
+</body>
+
+</html>

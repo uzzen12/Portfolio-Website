@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!---meta tags-->
+  <meta name="description" content="Portfolio Website, Coursework"> 
+  <meta name="keywords" content="CSS, HTML, javascript">
+  <meta name="author" content="Ujen Manandhar">
+  <meta http-equiv="refresh" content="8">
+
+  <title>Document</title>
+
+  <!---link for external CSS file-->
+  <link rel="stylesheet" href="../19033606 Ujen Manandhar/css/style.css">
+
+  <!---link for external javascript file-->
+  <script src="../19033606 Ujen Manandhar/javascript/main.js"></script>
+
+  <!---link of external font-->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1> Contact </h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li> <!--navigation links-->
+        <li><a href="CV.html">CV</a></li>
+        <li><a href="Research.html">Research</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a class="active" href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="contact-form"> <!--dividing section with id"contact-form"-->
+    <form name="messageForm" onsubmit="validateForm()"> <!--creating form and calling validateForm function"-->
+      <p>First Name: <input type="text" name="firstname"></p>
+      <p>Last Name: <input type="text" name="lastname"></p>
+      <p>Gender: <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+      </p><br>
+      <p>Email: <input type="text" name="email"></p>
+      <p>Message: <br><textarea name="message" rows="10" cols="30" placeholder="Enter a message"></textarea></p>
+      <p><input type="submit" value="Send"></p>
+    </form>
+  </div>
+  <h3 id="time_stamp"></h3>
+  <script>
+    function time_stamp() { //function to display time stamp
+      document.getElementById('time_stamp').innerHTML = Date()
+      setTimeout(time_stamp, 1000)
+    }
+    time_stamp()
+  </script>
+</body>
+
+</html>
